@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K71HQKPCYG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-K71HQKPCYG");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PETICIÓN GRUPO G75</title>
+    <link rel="icon" type="image/x-icon" href="https://amnistia.org.pe/img/favicon.ico" />
+
+    <!-- Importación de fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet" />
+    <!-- Carga de Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        margin: 0;
+        background: #000;
+        color: #fff;
+        scroll-behavior: smooth;
+        will-change: background-position;
+        backface-visibility: hidden;
+      }
+
+      .bg-gradient {
+        background: linear-gradient(90deg, rgba(255, 0, 0, 0.3) 0%, rgba(255, 165, 0, 0.3) 16%, rgba(255, 255, 0, 0.3) 32%, rgba(0, 128, 0, 0.3) 48%, rgba(0, 0, 255, 0.3) 64%, rgba(75, 0, 130, 0.3) 80%, rgba(238, 130, 238, 0.3) 100%), #000;
+        background-attachment: scroll;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        padding: 15px;
+        background: rgba(0, 0, 0, 0.8);
+        text-align: center;
+        z-index: 100;
+        height: 90px;
+      }
+      .logo {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+      }
+      .section {
+        min-height: calc(100vh - 90px);
+        min-height: calc(100dvh - 90px);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        height: calc(100dvh - 90px);
+      }
+      #seccion-instagram {
+        scroll-margin-top: 90px;
+        padding: 20px;
+      }
+
+      .step-title {
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-wrap: balance;
+        width: 95%;
+        line-height: 1.1;
+      }
+      .iframe-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 1025px;
+        margin: 0 auto;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      }
+
+      .form-frame {
+        width: 100%;
+        height: 100%;
+        border: none;
+        display: block;
+        border: none;
+        background: #fff;
+      }
+      .floating-container {
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        z-index: 99;
+        animation: bounce 2s ease-in-out infinite;
+        transition:
+          opacity 0.3s ease,
+          transform 0.3s ease;
+        opacity: 0;
+      }
+      #overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        cursor: pointer;
+        background: transparent;
+      }
+
+      .floating-label {
+        font-size: 14px;
+        color: #ffd500;
+        font-weight: 500;
+        white-space: nowrap;
+        background: rgba(0, 0, 0, 0.85);
+        padding: 9px 18px;
+        border-radius: 50px;
+        box-shadow: 0 0 15px rgba(255, 213, 0, 0.5);
+        line-height: 1;
+        transition: opacity 0.3s ease;
+      }
+
+      .floating-arrow {
+        position: relative;
+        width: 50px;
+        aspect-ratio: 1 / 1;
+        background: #ffd500;
+        color: #000;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 99;
+        box-shadow: 0 0 15px rgba(255, 213, 0, 0.5);
+        text-decoration: none;
+        transition: transform 0.3s ease;
+      }
+
+      .floating-arrow i {
+        font-size: 24px;
+      }
+      .floating-arrow:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+      }
+
+      .floating-arrow:active {
+        scale: 0.95;
+        transition: transform 0.3s ease;
+      }
+      @media (max-width: 768px) {
+        .section {
+          padding: 20px 0 0 0;
+        }
+
+        header {
+          height: 80px;
+        }
+
+        .section {
+          min-height: calc(100vh - 80px);
+          min-height: calc(100dvh - 80px);
+        }
+
+        .iframe-wrapper {
+          height: 60vh; /* Altura controlada */
+          overflow: hidden; /* Esto oculta la parte superior que quieres saltar */
+        }
+        .form-frame {
+          height: 200%; /* Hacemos el iframe más grande para poder desplazarlo */
+          margin-top: -380px; /* <--- CAMBIA ESTE VALOR para subir/bajar el inicio */
+        }
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateX(-50%) translateY(0);
+        }
+        40% {
+          transform: translateX(-50%) translateY(-10px);
+        }
+        60% {
+          transform: translateX(-50%) translateY(-5px);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gradient">
+    <header>
+      <img src="https://raw.githubusercontent.com/demberjavier/imagenes/main/logo%20existir%20con%20los%20mismos%20derechos.svg" alt="Logo" class="logo" />
+    </header>
+
+    <!-- Contenedor para el mensaje y el botón -->
+    <div class="floating-container" id="floating-ui">
+      <span class="floating-label" id="dynamic-text">Toca en acepto</span>
+      <a href="#seccion-instagram" class="floating-arrow">
+        <i class="ph-bold ph-arrow-down"></i>
+      </a>
+    </div>
+
+    <section class="section">
+      <h2 class="step-title">Paso 1: Súmate a la petición</h2>
+      <div class="iframe-wrapper">
+        <div id="overlay"></div>
+
+        <iframe src="https://amnistia.org.pe/anuncio/orgullo-2026-Arequipa-g75" class="form-frame"></iframe>
+      </div>
+    </section>
+
+    <section id="seccion-instagram" class="section">
+      <h2 class="step-title">Paso 2: Síguenos en Instagram</h2>
+      <div style="max-width: 900px">
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-2100a436-2ddb-42cc-8756-81c2fd993523"></div>
+      </div>
+    </section>
+    <script>
+      const textElement = document.getElementById("dynamic-text");
+      const container = document.getElementById("floating-ui");
+      const instagramSection = document.getElementById("seccion-instagram");
+      const iframe = document.querySelector(".form-frame");
+      const overlay = document.getElementById("overlay");
+
+      // 1. Mostrar contenedor inicialmente después de 2s
+      setTimeout(() => {
+        container.style.opacity = "1";
+      }, 2000);
+
+      // 2. Lógica para el botón (siempre visible, excepto al final)
+      window.addEventListener("scroll", () => {
+        // Calculamos si estamos al final de la página (con un margen de 10px)
+        const isAtBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 10;
+
+        // Ocultar si llega al final, mostrar en otro caso
+        container.style.opacity = isAtBottom ? "0" : "1";
+        container.style.pointerEvents = isAtBottom ? "none" : "auto";
+      });
+
+      // 3. Lógica para el texto (se oculta al ver la sección de Instagram)
+      const textObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              textElement.style.opacity = "0"; // Ocultar solo el texto
+            } else {
+              textElement.style.opacity = "1"; // Mostrar texto al regresar
+            }
+          });
+        },
+        { threshold: 0.5 },
+      );
+
+      textObserver.observe(instagramSection);
+
+      // 4. Cambiar texto y desbloquear formulario al interactuar
+      let hasInteracted = false;
+
+      function desbloquearFormulario() {
+        if (!hasInteracted) {
+          hasInteracted = true;
+
+          // Ocultar el escudo
+          overlay.style.display = "none";
+
+          // Lógica de texto
+          textElement.innerText = "Sigue deslizando";
+          setTimeout(() => {
+            textElement.innerText = "Paso 2: Síguenos en Instagram";
+          }, 15000);
+        }
+      }
+
+      // Desbloquear al hacer clic sobre el formulario
+      overlay.addEventListener("click", desbloquearFormulario);
+
+      // Desbloquear al intentar hacer scroll (mouse o touch)
+      window.addEventListener("scroll", desbloquearFormulario, { once: true });
+      window.addEventListener("touchstart", desbloquearFormulario, { once: true });
+    </script>
+  </body>
+</html>
